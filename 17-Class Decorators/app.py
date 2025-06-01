@@ -6,17 +6,14 @@
 
 def add_greeting(cls):
     def greet(self):
-        return "Hello from Decorator!"
+        return "hello from decorator!"
     cls.greet = greet
     return cls
 
-
 @add_greeting
-class Person:
+class Person():
     def __init__(self):
         pass
-        
-
 
 p = Person()
 print(p.greet())
